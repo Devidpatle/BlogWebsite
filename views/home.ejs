@@ -1,0 +1,20 @@
+
+<%- include("partials/header"); -%>
+    <h1>Put Your Thoughts, Your Way</h1>
+    <H3>Create a unique and beautiful blog easily.</H3>
+    <p> <%= startingContent %> </p>
+
+
+  <%  posts.forEach(function(post){ %>
+
+    <h1><%=post.title%></h1>
+    <p>
+    <%=post.content.substring(0, 100) + " ..."%>
+    <a href="/posts/<%=post.id%>">Read More</a>
+    </p>
+
+
+    <% }) %>
+
+
+<%- include("partials/footer"); -%>
